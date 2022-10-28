@@ -7,14 +7,25 @@ public class Product {
     private final BigDecimal pricePerUnit;
     private final int quantity;
 
+    private final String category;
+
     public Product(String name, BigDecimal pricePerUnit, int quantity) {
+        this(name, pricePerUnit, quantity, null);
+    }
+
+    public Product(String name, BigDecimal pricePerUnit, int quantity, String category) {
         this.name = name;
         this.pricePerUnit = pricePerUnit;
         this.quantity = quantity;
+        this.category = category;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getCategory() {
+        return category;
     }
 
     public BigDecimal getPricePerUnit() {
